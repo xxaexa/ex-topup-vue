@@ -1,0 +1,104 @@
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #fdfbf8;
+}
+
+button {
+}
+
+.max-w {
+  max-width: 1200px;
+  margin: auto;
+}
+.h-screen {
+  height: 100vh;
+}
+
+.hero {
+  background-color: #c4c4c4;
+}
+.nav {
+  position: fixed;
+  top: 0px;
+  background-color: #fdfbf8;
+  padding: 0px;
+  marign: 0px;
+}
+
+button {
+  background-color: #70908b;
+  color: #fdfbf8;
+  border-radius: 5px;
+  border: none;
+
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+img {
+  width: fit-content;
+  height: 900px;
+  object-fit: contain;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+/* typography */
+.regular-text {
+  color: #07484a;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.large-text {
+  color: #07484a;
+  font-size: 2rem;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+/* layout */
+.voucher-left {
+  width: 20%;
+}
+.voucher-right {
+  margin-left: 20px;
+  width: 80%;
+  overflow: scroll;
+}
+
+/* component */
+.search {
+  background-color: #f0f0f0;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+}
+
+.input-row {
+  background-color: #f0f0f0;
+  border: none;
+  outline: none;
+}
+
+.bg-white {
+  background-color: #f0f0f0;
+}
+
+.icon-search {
+  width: 20px;
+  height: 20px;
+}
+.card {
+  cursor: pointer;
+  background-color: #f0f0f0;
+  width: 250px;
+  height: 220px;
+}
