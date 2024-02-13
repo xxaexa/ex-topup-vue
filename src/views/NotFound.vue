@@ -2,9 +2,7 @@
   <div class="d-flex justify-content-center align-items-center h-screen">
     <div>
       <h1>404 Not Found</h1>
-      <RegularText
-        Text="The page you are looking for was not found."
-      ></RegularText>
+      <RegularText text="The page you are looking for was not found." />
 
       <router-link to="/">Go to Home</router-link>
     </div>

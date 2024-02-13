@@ -1,34 +1,32 @@
 import request from "./../utils/request";
 
-export const getVouchers = (params: any) =>
+export const getVouchers = () =>
   request({
     url: "/voucher",
     method: "get",
-    params,
   });
 
-export const getVoucher = (data: any) =>
+export const getVoucher = (name: string) =>
   request({
-    url: "/users/info",
-    method: "post",
-    data,
-  });
-
-export const getUserByName = (username: string) =>
-  request({
-    url: `/users/${username}`,
+    url: `/voucher/${name}`,
     method: "get",
   });
 
-export const updateUser = (username: string, data: any) =>
+export const getVoucherByGenre = (_id: string) =>
   request({
-    url: `/users/${username}`,
-    method: "put",
+    url: `/voucher/genre/${_id}`,
+    method: "get",
+  });
+
+export const updateVoucher = (data: any, _id: string) =>
+  request({
+    url: `/voucher/${_id}`,
+    method: "update",
     data,
   });
 
-export const deleteUser = (username: string) =>
+export const deleteVoucher = (_id: string) =>
   request({
-    url: `/users/${username}`,
+    url: `/voucher/${_id}`,
     method: "delete",
   });

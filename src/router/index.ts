@@ -1,14 +1,20 @@
 // router/index.ts
 import { createRouter, createWebHistory } from "vue-router";
-import LandingVue from "../views/Landing.vue";
-import VouchersVue from "../views/Vouchers.vue";
+
 import NotFoundVue from "../views/NotFound.vue";
-import AboutVue from "../views/About.vue";
-import TrackVue from "../views/Track.vue";
-import VoucherVue from "../views/Voucher.vue";
-import LoginVue from "../views/Login.vue";
-import DashboardVue from "../views/Dashboard.vue";
-import OrderVue from "../views/Order.vue";
+// home
+import LandingVue from "../views/home/Landing.vue";
+import VoucherVue from "../views/home/Voucher.vue";
+import VouchersVue from "../views/home/Vouchers.vue";
+import TrackVue from "../views/home/Track.vue";
+import AboutVue from "../views/home/About.vue";
+
+// dashboard
+import DashboardVue from "../views/dashboard/Dashboard.vue";
+import DashboardVoucherVue from "./../views/dashboard/voucher/Voucher.vue";
+import DashboardOrderVue from "../views/dashboard/order/Order.vue";
+import DashboardGenreVue from "../views/dashboard/genre/Genre.vue";
+import LoginVue from "../views/dashboard/Login.vue";
 
 const routes = [
   {
@@ -16,30 +22,27 @@ const routes = [
     name: "landingPage",
     component: LandingVue,
   },
-
+  {
+    path: "/vouchers",
+    name: "vouchers",
+    component: VouchersVue,
+  },
+  {
+    path: "/vouchers/:name",
+    name: "voucher",
+    component: VoucherVue,
+  },
+  {
+    path: "/track",
+    name: "track",
+    component: TrackVue,
+  },
   {
     path: "/about",
     name: "about",
     component: AboutVue,
   },
 
-  {
-    path: "/vouchers",
-    name: "vouchers",
-    component: VouchersVue,
-  },
-
-  {
-    path: "/vouchers/:name",
-    name: "voucher",
-    component: VoucherVue,
-  },
-
-  {
-    path: "/track",
-    name: "track",
-    component: TrackVue,
-  },
   {
     path: "/login",
     name: "login",
@@ -50,7 +53,7 @@ const routes = [
     path: "/dashboard",
     component: DashboardVue,
     beforeEnter: (to, from, next) => {
-      const userInfo = localStorage.getItem("userInfo");
+      const userInfo = localStorage.getItem("user");
 
       if (!userInfo) {
         next({ name: "login" });
@@ -60,10 +63,19 @@ const routes = [
     },
     children: [
       {
+        path: "voucher",
+        name: "dashboardVoucher",
+        component: DashboardVoucherVue,
+      },
+      {
         path: "order",
-        name: "order",
-        component: OrderVue,
-        // Anda bisa menambahkan pengecekan serupa di sini jika perlu
+        name: "dashboardOrder",
+        component: DashboardOrderVue,
+      },
+      {
+        path: "genre",
+        name: "DashboardGenre",
+        component: DashboardGenreVue,
       },
     ],
   },

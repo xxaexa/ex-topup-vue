@@ -10,21 +10,21 @@
       class="container-fluid justify-content-between max-w align-content-center"
     >
       <div>
-        <RegularText text="EX-TOPUP" />
+        <LinkText text="EX-TOPUP" />
       </div>
       <div class="d-flex align-items-center gap-4">
         <router-link
           :to="props.isVoucherPage ? '#voucher' : '/vouchers'"
           class="no-underline"
         >
-          <RegularText text="Voucher" />
+          <LinkText text="Voucher" />
         </router-link>
 
         <router-link to="/track" class="no-underline">
-          <RegularText text="Track" />
+          <LinkText text="Track" />
         </router-link>
         <router-link to="/about" class="no-underline">
-          <RegularText text="About" />
+          <LinkText text="About" />
         </router-link>
       </div>
     </div>
@@ -33,7 +33,7 @@
 
 <script setup lang="ts">
 import { onMounted, onUnmounted, ref } from "vue";
-import RegularText from "./../common/RegularText.vue";
+import LinkText from "../common/LinkText.vue";
 import { NavbarProps } from "./../../types/";
 const props = defineProps<NavbarProps>();
 

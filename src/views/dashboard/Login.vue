@@ -8,12 +8,12 @@
         <FormLogin />
       </div>
       <div style="width: 50%">
-        <img src="./../assets/jett.png" alt="jett" />
+        <img src="../../assets/jett.png" alt="jett" />
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import FormLogin from "../components/layout/FormLogin.vue";
+import FormLogin from "../../components/layout/FormLogin.vue";
 </script>

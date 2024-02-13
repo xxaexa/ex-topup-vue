@@ -1,34 +1,33 @@
 import request from "./../utils/request";
 
-export const getGenres = (params: any) =>
+export const getGenres = () =>
   request({
     url: "/genre",
     method: "get",
-    params,
   });
 
-export const getVoucher = (data: any) =>
+export const getGenre = (name: string) =>
   request({
-    url: "/users/info",
+    url: `genre/${name}`,
+    method: "get",
+  });
+
+export const addGenre = (data: any) =>
+  request({
+    url: `genre`,
     method: "post",
     data,
   });
 
-export const getUserByName = (username: string) =>
+export const updateGenre = (data: any, name: string) =>
   request({
-    url: `/users/${username}`,
-    method: "get",
-  });
-
-export const updateUser = (username: string, data: any) =>
-  request({
-    url: `/users/${username}`,
-    method: "put",
+    url: `genre/${name}`,
+    method: "update",
     data,
   });
 
-export const deleteUser = (username: string) =>
+export const deleteGenre = (_id: string) =>
   request({
-    url: `/users/${username}`,
+    url: `genre/${_id}`,
     method: "delete",
   });

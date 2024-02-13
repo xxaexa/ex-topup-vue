@@ -1,13 +1,13 @@
 <template>
   <div class="hero">
     <div
-      class="max-w d-flex justify-content-between align-items-center flex-column flex-md-row"
+      class="max-w d-flex justify-content-between align-items-center flex-row"
       style="height: 100vh"
     >
-      <div class="px-3" style="width: 50%">
-        <h1>TOPUP NOW</h1>
-        <h1>AND</h1>
-        <h1>GET DISCOUNT</h1>
+      <div class="w-100 w-md-50 pt-5 pt-md-0 px-3">
+        <LargeText text="TOPUP NOW" />
+        <LargeText text="AND" />
+        <LargeText text="GET DISCOUNT" />
 
         <div class="my-4">
           <RegularText
@@ -20,8 +20,8 @@
           </a>
         </div>
       </div>
-      <div style="width: 50%; margin-bottom: 0pxw">
-        <img src="./../../assets/jett.png" alt="" />
+      <div class="w-50 d-none d-md-block">
+        <img src="./../../assets/jett.png" alt="" class="h-fit" />
       </div>
     </div>
   </div>
@@ -29,5 +29,6 @@
 
 <script setup lang="ts">
 import RegularText from "../common/RegularText.vue";
+import LargeText from "../common/LargeText.vue";
 import Button from "../common/Button.vue";
 </script>

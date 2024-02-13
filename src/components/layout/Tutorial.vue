@@ -3,12 +3,12 @@
     class="search d-flex align-content-center flex-column p-3 mb-5"
     style="width: 50%"
   >
-    <RegularText Text="1. Input your id"></RegularText>
-    <RegularText Text="2. Select variant"></RegularText>
+    <RegularText text="1. Input your id" />
+    <RegularText text="2. Select variant" />
     <RegularText
-      Text="3. Input coupon to get discount (If you have a coupon )"
-    ></RegularText>
-    <RegularText Text="4.  Buy"></RegularText>
+      text="3. Input coupon to get discount (If you have a coupon )"
+    />
+    <RegularText text="4. Buy" />
   </div>
 </template>
 

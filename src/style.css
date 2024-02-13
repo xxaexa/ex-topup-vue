@@ -14,6 +14,10 @@ button {
   max-width: 1200px;
   margin: auto;
 }
+.width-50 {
+  width: 50%;
+}
+
 .h-screen {
   height: 100vh;
 }
@@ -59,9 +63,22 @@ img {
 
 .large-text {
   color: #07484a;
+  font-weight: 600;
   font-size: 2rem;
+}
+
+.link-text {
+  color: #07484a;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.sidebar-text {
+  color: #07484a;
+  font-size: 1rem;
   font-weight: 400;
-  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
 
 /* layout */
@@ -72,6 +89,25 @@ img {
   margin-left: 20px;
   width: 80%;
   overflow: scroll;
+}
+.dashboard {
+  margin-left: 320px;
+  margin-right: 320px;
+  padding-top: 15px;
+  background-color: #c4c4c4;
+}
+.sidebar {
+  background-color: #f0f0f0;
+  position: fixed;
+  width: 260px;
+  height: 100vh;
+}
+.table-genre {
+  border-radius: 10px;
+  background-color: #f0f0f0;
+  padding: 10px;
+  width: fit-content;
+  margin-top: 30px;
 }
 
 /* component */
@@ -101,4 +137,24 @@ img {
   background-color: #f0f0f0;
   width: 250px;
   height: 220px;
+}
+
+.box {
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.hidden {
+  display: block;
+}
+
+@media screen and (max-width: 480px) {
+  .width-50 {
+    width: 100%;
+  }
+  .hidden {
+    display: none;
+  }
 }
